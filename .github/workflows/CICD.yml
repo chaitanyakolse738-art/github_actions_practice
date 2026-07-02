@@ -1,0 +1,16 @@
+name: CICD
+
+on:
+  workflow_dispatch:
+
+jobs:
+  Code:
+    runs-on: ubuntu-latest
+    steps:
+      - name: this is bui
+
+  Build:
+
+  Test:
+
+  Deploy:
