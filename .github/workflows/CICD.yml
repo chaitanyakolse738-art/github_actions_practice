@@ -12,7 +12,7 @@ jobs:
         
 
   Build:
-    needs: [code]
+    needs: [Code]
     runs-on: ubuntu-latest
     steps:
       - name: build code
