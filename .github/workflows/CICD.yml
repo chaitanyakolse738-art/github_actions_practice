@@ -7,10 +7,28 @@ jobs:
   Code:
     runs-on: ubuntu-latest
     steps:
-      - name: this is bui
+      - name: clone the code
+        run: echo "clonning the code"
+        
 
   Build:
+    needs: [code]
+    runs-on: ubuntu-latest
+    steps:
+      - name: build code
+        run: echo "Building the code"
+        
 
   Test:
-
+    needs: [Build]
+    runs-on: ubuntu-latest
+    steps:
+      - name: test the code
+        run: echo "Testing the code"
+        
   Deploy:
+    needs: [Build,Test]
+    runs-on: ubuntu-latest
+    steps:
+    - name: Deploy the code
+      run: echo "Deploying the code"
