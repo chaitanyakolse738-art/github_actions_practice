@@ -2,8 +2,8 @@ name:  testing file
 
 on: 
   push:
-  paths: 
-    - "*.py"
+    paths: 
+      - "*.py"
 
 jobs:
   code:
