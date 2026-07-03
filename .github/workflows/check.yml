@@ -1,0 +1,20 @@
+name: testing_file
+
+on: 
+  push:
+  path: "*.py"
+
+jobs:
+  code:
+    runs-on: ubuntu-latest
+    steps:
+      - name: cloning the code
+        uses: action/checkout@7
+
+    steps:
+      - name: install linter
+        run: npm ci
+
+    steps:
+      - name: run linter checking syntax
+        run:  ruff check .
